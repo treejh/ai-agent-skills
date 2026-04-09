@@ -48,8 +48,6 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 | [dev](plugins/dev/) | `/dev-scan` | 코드베이스 탐색 + 기술 결정 분석 멀티에이전트 |
 | [session-wrap](plugins/session-wrap/) | "wrap up", "세션 마무리" | 5개 에이전트가 학습/자동화/문서/태스크 분석 |
 | [interactive-review](plugins/interactive-review/) | `/review` | 마크다운을 웹 UI로 인터랙티브 리뷰 |
-| [agent-council](plugins/agent-council/) | `/agent-council` | Claude + Codex + Gemini 동시 질의 후 의견 종합 |
-| [team-assemble](plugins/team-assemble/) | `/team-assemble` | 태스크에 맞는 에이전트 팀 동적 구성 |
 
 자세한 내용은 [plugins/README.md](plugins/README.md) 참고.
 

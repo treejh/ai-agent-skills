@@ -28,8 +28,6 @@ Claude Code 플러그인 모음. 스킬과 달리 여러 스킬/에이전트/커
 | [dev](dev/) | `/dev-scan` | 코드베이스 탐색 + 기술 결정 분석 멀티에이전트 |
 | [session-wrap](session-wrap/) | "세션 마무리", "wrap up" | 세션 종료 시 5개 에이전트가 학습/자동화/문서 분석 |
 | [interactive-review](interactive-review/) | `/review` | 마크다운 문서를 웹 UI로 인터랙티브 리뷰 |
-| [agent-council](agent-council/) | `/agent-council` | Claude + Codex + Gemini에게 동시에 질문해서 의견 종합 |
-| [team-assemble](team-assemble/) | `/team-assemble` | 태스크에 맞는 전문 에이전트 팀을 동적으로 구성 |
 
 ### 요구사항 분석 (clarify 세부)
 
@@ -72,7 +70,5 @@ clarify:vague     ← 아이디어를 구체적 스펙으로
   ↓
 clarify:unknown   ← 놓친 가정/리스크 발굴
   ↓
-agent-council     ← Claude + Codex + Gemini 의견 수렴
-  ↓
-team-assemble     ← 구현 에이전트 팀 구성
+dev               ← 코드베이스 탐색 + 기술 결정 분석
 ```
