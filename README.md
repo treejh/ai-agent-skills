@@ -46,17 +46,10 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 |---------|--------|------|
 | [clarify](plugins/clarify/) | "요구사항 명확히", "뭘 원하는 건지" | 모호한 요구사항 → 구체적 스펙 (vague/unknown/metamedium 3종) |
 | [dev](plugins/dev/) | `/dev-scan` | 코드베이스 탐색 + 기술 결정 분석 멀티에이전트 |
-| [doubt](plugins/doubt/) | 프롬프트에 `!rv` | Claude 응답 강제 재검증 |
 | [session-wrap](plugins/session-wrap/) | "wrap up", "세션 마무리" | 5개 에이전트가 학습/자동화/문서/태스크 분석 |
 | [interactive-review](plugins/interactive-review/) | `/review` | 마크다운을 웹 UI로 인터랙티브 리뷰 |
 | [agent-council](plugins/agent-council/) | `/agent-council` | Claude + Codex + Gemini 동시 질의 후 의견 종합 |
 | [team-assemble](plugins/team-assemble/) | `/team-assemble` | 태스크에 맞는 에이전트 팀 동적 구성 |
-| [gmail](plugins/gmail/) | "메일 확인", "이메일 보내줘" | Gmail 읽기/검색/전송 |
-| [google-calendar](plugins/google-calendar/) | "오늘 일정", "미팅 추가해줘" | Google Calendar 조회/생성 |
-| [kakaotalk](plugins/kakaotalk/) | "카톡 보내줘" | macOS 카카오톡 메시지 전송/읽기 |
-| [youtube-digest](plugins/youtube-digest/) | YouTube URL, "영상 요약" | 영상 분석 → 요약/인사이트/퀴즈 |
-| [podcast](plugins/podcast/) | "팟캐스트 만들어줘" | URL/기사 → 한국어 팟캐스트 + YouTube 업로드 |
-| [say-summary](plugins/say-summary/) | 자동 활성화 | Claude 응답을 macOS TTS로 음성 요약 |
 
 자세한 내용은 [plugins/README.md](plugins/README.md) 참고.
 
