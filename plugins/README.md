@@ -28,6 +28,7 @@ Claude Code 플러그인 모음. 스킬과 달리 여러 스킬/에이전트/커
 | [dev](dev/) | `/dev-scan` | 코드베이스 탐색 + 기술 결정 분석 멀티에이전트 |
 | [session-wrap](session-wrap/) | "세션 마무리", "wrap up" | 세션 종료 시 5개 에이전트가 학습/자동화/문서 분석 |
 | [interactive-review](interactive-review/) | `/review` | 마크다운 문서를 웹 UI로 인터랙티브 리뷰 |
+| [codex](codex/) | `/codex:review`, `/codex:rescue`, `/codex:status` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
 
 ### 요구사항 분석 (clarify 세부)
 
