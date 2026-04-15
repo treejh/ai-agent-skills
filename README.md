@@ -24,6 +24,13 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 | [test-driven-development](skills/test-driven-development/) | Red→Green→Refactor TDD 워크플로우 강제 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/test-driven-development/README.md) |
 | [subagent-driven-development](skills/subagent-driven-development/) | 독립 태스크를 여러 서브에이전트에게 병렬 위임 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/subagent-driven-development/README.md) |
 | [claude-orchestrator](skills/claude-orchestrator/) | Claude + Codex + Gemini 오케스트레이션 설정 | [gaebalai/claude-code-orchestrator](https://github.com/gaebalai/claude-code-orchestrator) | [README](skills/claude-orchestrator/README.md) |
+| [check](skills/check/) | 구현 완료 후 코드 리뷰 — diff 읽고 이슈 수정 및 보안·아키텍처 전문 리뷰어 실행 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/check/README.md) |
+| [hunt](skills/hunt/) | 에러·크래시·실패 테스트 디버깅 — 수정 전에 반드시 근본 원인 파악 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/hunt/README.md) |
+| [health](skills/health/) | Claude Code 설정 스택 6계층 감사 — 동작 이상, 훅 오작동, MCP 점검 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/health/README.md) |
+| [think](skills/think/) | 코드 작성 전 설계·아키텍처 계획 수립 — 승인 전까지 코드 없음 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/think/README.md) |
+| [learn](skills/learn/) | 낯선 도메인 리서치 → 출판 가능한 아티클로 전환 (6단계 워크플로우) | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/learn/README.md) |
+| [write](skills/write/) | 영어·중국어 산문 다듬기 — AI 글쓰기 패턴 제거, 자연스러운 문체로 재작성 | [obra/superpowers](https://github.com/obra/superpowers) | [README](skills/write/README.md) |
+| [find-skills](skills/find-skills/) | 스킬 생태계(skills.sh)에서 설치 가능한 스킬 검색 및 추천 | [skills.sh](https://skills.sh/) | [README](skills/find-skills/README.md) |
 
 ---
 
@@ -118,13 +125,41 @@ cp -r ~/ai-agent-skills/plugins/* ~/.claude/plugins/
 ### 새 기능 개발
 
 ```
-/writing-plans              ← 구현 계획 먼저 수립
+/think                      ← 아키텍처·설계 계획 먼저 수립 (승인 받기)
+  ↓
+/writing-plans              ← 구현 계획 단계별 문서화
   ↓
 /test-driven-development    ← TDD로 구현
   ↓
 /subagent-driven-development  ← 독립 태스크 많으면 병렬 처리
   ↓
+/check                      ← 머지 전 코드 리뷰
+  ↓
 /ccm                        ← 커밋
+```
+
+### 디버깅
+
+```
+에러 발생
+  ↓
+/hunt                       ← 근본 원인 먼저 파악
+  ↓
+수정 적용
+  ↓
+/check                      ← 수정 내용 검토
+```
+
+### Claude 동작 이상 시
+
+```
+/health                     ← 설정 스택 6계층 감사
+```
+
+### 도메인 리서치
+
+```
+/learn                      ← 자료 수집 → 소화 → 아티클 작성 (6단계)
 ```
 
 ---
