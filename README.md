@@ -56,6 +56,7 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 | [session-wrap](plugins/session-wrap/) | "wrap up", "세션 마무리" | 5개 에이전트가 학습/자동화/문서/태스크 분석 |
 | [interactive-review](plugins/interactive-review/) | `/review` | 마크다운을 웹 UI로 인터랙티브 리뷰 |
 | [codex](plugins/codex/) | `/codex:review`, `/codex:rescue` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
+| [code-review](plugins/code-review/) | `/code-review` | 5개 병렬 에이전트 PR 자동 리뷰 — 신뢰도 80+ 이슈만 GitHub 코멘트 |
 | [learning-opportunities](plugins/learning-opportunities/) | 아키텍처 작업 완료 후 자동 제안 | AI 코딩 중 실제 실력 향상을 위한 학습 과학 기반 연습 (orient 쌍 필요) |
 
 자세한 내용은 [plugins/README.md](plugins/README.md) 참고.
@@ -142,9 +143,13 @@ claude plugin install orient@learning-opportunities
   ↓
 /subagent-driven-development  ← 독립 태스크 많으면 병렬 처리
   ↓
-/check                      ← 머지 전 코드 리뷰
+/check                      ← 머지 전 로컬 코드 리뷰
   ↓
 /ccm                        ← 커밋
+  ↓
+/cpr                        ← PR 생성
+  ↓
+/code-review                ← PR 자동 리뷰 (5개 에이전트, 신뢰도 80+ 이슈만 코멘트)
 ```
 
 ### 디버깅

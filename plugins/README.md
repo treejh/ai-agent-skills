@@ -29,6 +29,7 @@ Claude Code 플러그인 모음. 스킬과 달리 여러 스킬/에이전트/커
 | [session-wrap](session-wrap/) | "세션 마무리", "wrap up" | 세션 종료 시 5개 에이전트가 학습/자동화/문서 분석 |
 | [interactive-review](interactive-review/) | `/review` | 마크다운 문서를 웹 UI로 인터랙티브 리뷰 |
 | [codex](codex/) | `/codex:review`, `/codex:rescue`, `/codex:status` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
+| [code-review](code-review/) | `/code-review` | 5개 병렬 에이전트 PR 자동 리뷰 — 신뢰도 80+ 이슈만 GitHub에 코멘트 |
 | [learning-opportunities](learning-opportunities/) | 아키텍처 작업 완료 후 자동 제안, `/learning-opportunities` | AI 코딩 중 실제 실력 향상을 위한 학습 과학 기반 인터랙티브 연습 |
 
 ### 학습 지원 (learning-opportunities 세부)
