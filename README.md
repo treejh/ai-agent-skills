@@ -56,6 +56,7 @@ Claude Code와 AI 코딩 에이전트를 위한 **개발 워크플로우 스킬 
 | [session-wrap](plugins/session-wrap/) | "wrap up", "세션 마무리" | 5개 에이전트가 학습/자동화/문서/태스크 분석 |
 | [interactive-review](plugins/interactive-review/) | `/review` | 마크다운을 웹 UI로 인터랙티브 리뷰 |
 | [codex](plugins/codex/) | `/codex:review`, `/codex:rescue` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
+| [learning-opportunities](plugins/learning-opportunities/) | 아키텍처 작업 완료 후 자동 제안 | AI 코딩 중 실제 실력 향상을 위한 학습 과학 기반 연습 (orient 쌍 필요) |
 
 자세한 내용은 [plugins/README.md](plugins/README.md) 참고.
 
@@ -94,14 +95,22 @@ ln -s ~/ai-agent-skills/commands/cpr.md ~/.claude/commands/cpr.md
 
 ### 4. 플러그인 설치
 
+team-attention 계열 플러그인 (직접 복사):
+
 ```bash
 # 원하는 플러그인만 선택
 cp -r ~/ai-agent-skills/plugins/clarify ~/.claude/plugins/clarify
 cp -r ~/ai-agent-skills/plugins/session-wrap ~/.claude/plugins/session-wrap
-cp -r ~/ai-agent-skills/plugins/doubt ~/.claude/plugins/doubt
 
 # 또는 전체 설치
 cp -r ~/ai-agent-skills/plugins/* ~/.claude/plugins/
+```
+
+learning-opportunities 계열 플러그인 (Claude Code plugin 명령으로 설치):
+
+```bash
+claude plugin install learning-opportunities@learning-opportunities
+claude plugin install orient@learning-opportunities
 ```
 
 ---
@@ -160,6 +169,26 @@ cp -r ~/ai-agent-skills/plugins/* ~/.claude/plugins/
 
 ```
 /learn                      ← 자료 수집 → 소화 → 아티클 작성 (6단계)
+```
+
+### 새 레포 온보딩 (빠른 이해)
+
+```
+/orient:orient                    ← 레포 분석 후 orientation.md 생성 (~30초)
+  ↓
+/learning-opportunities orient    ← 레포 구조 학습 연습 (10-15분)
+  ↓
+개발 시작
+```
+
+### AI 코딩 중 실력 향상
+
+```
+기능 구현 (새 파일·DB 스키마·리팩토링)
+  ↓
+/learning-opportunities           ← 방금 만든 코드로 능동 학습 (자동 제안됨)
+  ↓
+/session-wrap                     ← 세션 전체 정리 및 학습 회고
 ```
 
 ---

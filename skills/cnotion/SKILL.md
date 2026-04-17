@@ -61,7 +61,7 @@ git diff --stat
 
 #### 1-4. Analyze session conversation (Critical)
 
-Extract from the current Claude session:
+Extract from the current Codex session:
 - Concepts learned during implementation ("so that's how this pattern works")
 - Design deliberations ("A vs B — why we chose B")
 - Misconceptions corrected ("thought it was A, turned out to be B")

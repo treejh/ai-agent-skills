@@ -20,10 +20,10 @@ All output content is written in **Korean**.
 > See [README.md](./README.md) for setup instructions.
 
 - **Base path**: `~/devlog/`
-- **Author filter**: `<YOUR_NAME>` / `<YOUR_EMAIL>` — ONLY process this author's commits
+- **Author filter**: `treejh` / `jihyun3066@naver.com` — ONLY process this author's commits
 - **Active projects** (for scheduled runs):
-  - `/path/to/your/project1`
-  - `/path/to/your/project2`
+  - `/Users/smplanet/spring_project/flat/Fermata-BE`
+  - `/Users/smplanet/spring_project/route/project/backend/easyplus_en_server`
 
 > When running as a scheduled task (non-interactive), process ALL active projects above.
 > When run manually in a project directory, process only the current directory.
@@ -47,10 +47,10 @@ basename $(git rev-parse --show-toplevel)
 #### 1-2. Gather today's commits (author-filtered)
 
 ```bash
-git log --oneline --since="YYYY-MM-DD 00:00:00" --author="<YOUR_NAME>" --all
+git log --oneline --since="YYYY-MM-DD 00:00:00" --author="treejh" --all
 
 # If none, get recent commits
-git log --format="%H %ad %s" --date=format:"%Y-%m-%d %H:%M" --author="<YOUR_NAME>" -15
+git log --format="%H %ad %s" --date=format:"%Y-%m-%d %H:%M" --author="treejh" -15
 ```
 
 #### 1-3. Inspect each commit
@@ -71,7 +71,7 @@ git diff --stat
 
 #### 1-5. Analyze session conversation (Critical)
 
-Extract from the current Claude session:
+Extract from the current Codex session:
 - Concepts learned during implementation
 - Design deliberations (A vs B — why we chose B)
 - Misconceptions corrected

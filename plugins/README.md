@@ -2,7 +2,7 @@
 
 Claude Code 플러그인 모음. 스킬과 달리 여러 스킬/에이전트/커맨드를 하나로 묶은 패키지.
 
-> 출처: [team-attention/plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)
+> 출처: [team-attention/plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives), [DrCatHicks/learning-opportunities](https://github.com/DrCatHicks/learning-opportunities)
 
 ---
 
@@ -29,6 +29,14 @@ Claude Code 플러그인 모음. 스킬과 달리 여러 스킬/에이전트/커
 | [session-wrap](session-wrap/) | "세션 마무리", "wrap up" | 세션 종료 시 5개 에이전트가 학습/자동화/문서 분석 |
 | [interactive-review](interactive-review/) | `/review` | 마크다운 문서를 웹 UI로 인터랙티브 리뷰 |
 | [codex](codex/) | `/codex:review`, `/codex:rescue`, `/codex:status` | OpenAI Codex CLI 연동 — 코드 리뷰, 디버깅, 리팩토링 위임 |
+| [learning-opportunities](learning-opportunities/) | 아키텍처 작업 완료 후 자동 제안, `/learning-opportunities` | AI 코딩 중 실제 실력 향상을 위한 학습 과학 기반 인터랙티브 연습 |
+
+### 학습 지원 (learning-opportunities 세부)
+
+| 스킬 | 트리거 | 설명 |
+|------|--------|------|
+| `learning-opportunities` | 신규 파일·스키마 변경·리팩토링 후 자동 제안 | 예측→관찰→반성 등 6가지 인터랙티브 연습 제공 |
+| `orient:orient` | `/orient:orient` (명시적 호출만) | 레포 구조 분석 후 `orientation.md` 생성 — `/learning-opportunities orient`의 재료 |
 
 ### 요구사항 분석 (clarify 세부)
 
@@ -72,4 +80,24 @@ clarify:vague     ← 아이디어를 구체적 스펙으로
 clarify:unknown   ← 놓친 가정/리스크 발굴
   ↓
 dev               ← 코드베이스 탐색 + 기술 결정 분석
+```
+
+### 새 레포 온보딩 세트
+
+```
+/orient:orient                    ← 레포 분석 후 orientation.md 생성 (~30초)
+  ↓
+/learning-opportunities orient    ← 레포 구조 이해 학습 연습 (10-15분)
+  ↓
+개발 시작
+```
+
+### AI 코딩 실력 향상 세트
+
+```
+기능 구현
+  ↓
+/learning-opportunities           ← 방금 만든 코드로 능동 학습
+  ↓
+/session-wrap                     ← 세션 전체 정리 및 회고
 ```
